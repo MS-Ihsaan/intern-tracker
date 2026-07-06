@@ -35,12 +35,10 @@ As I was applying for internships, I kept losing track of what I'd applied to an
 
 ## Running locally
 
-\`\`\`bash
 git clone https://github.com/MS-Ihsaan/intern-tracker
 cd interntrack
 npm install
 npm run dev
-\`\`\`
 
 ## Future improvements
 

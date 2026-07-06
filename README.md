@@ -33,16 +33,17 @@ As I was applying for internships, I kept losing track of what I'd applied to an
 - **Custom hooks:** `useFetch` for data fetching with loading/error states, `useApplications` for tracker logic — keeps components focused on rendering, not logic.
 - **Context over prop drilling:** Application state is shared via Context since multiple pages (Browse, Tracker) need access.
 
-## Running locally
-
-git clone https://github.com/MS-Ihsaan/intern-tracker
-cd interntrack
-npm install
-npm run dev
-
 ## Future improvements
 
 - Drag-and-drop between status columns
 - Notes/reminders per application
 - Export applications to CSV
 - Backend + auth for multi-device sync
+
+## Running locally
+
+```bash
+git clone [https://github.com/MS-Ihsaan/intern-tracker](https://github.com/MS-Ihsaan/intern-tracker)
+cd interntrack
+npm install
+npm run dev

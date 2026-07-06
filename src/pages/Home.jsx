@@ -2,11 +2,13 @@ import { useMemo, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { fetchJobs } from "../services/jobsApi";
 import JobList from "../components/JobList";
+import { useApplications } from "../context/ApplicationsContext";
 
 export default function Home() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
   const [remoteOnly, setRemoteOnly] = useState(false);
+  const { saveApplication } = useApplications();
 
   const { data: allJobs, loading, error } = useFetch(() => fetchJobs(), []);
 
@@ -39,7 +41,7 @@ export default function Home() {
   }, [allJobs, search, category, remoteOnly]);
 
   const handleSave = (job) => {
-    console.log("Saving job:", job);
+    saveApplication(job);
   };
 
   return (

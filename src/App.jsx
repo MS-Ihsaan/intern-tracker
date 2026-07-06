@@ -1,13 +1,20 @@
-import Home from './pages/Home'
-import './index.css'
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Tracker from "./pages/Tracker";
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Home />
-    </>
-  )
-}
+    <BrowserRouter>
+      <nav className="bg-gray-900 text-white px-4 py-3 flex gap-6">
+        <Link to="/" className="font-semibold">InternTrack</Link>
+        <Link to="/">Browse</Link>
+        <Link to="/tracker">My Applications</Link>
+      </nav>
 
-export default App
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tracker" element={<Tracker />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
